@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Background color for the page */
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .message, .buttons {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .message.visible, .buttons.visible {
+    opacity: 1;
+  }
+  
+  .message.hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

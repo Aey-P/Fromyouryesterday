@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FYY</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="section">
+      <p id="msg1" class="message hidden">Hi ;)</p>
+      <p id="msg2" class="message hidden">How are you doing?</p>
+      <p id="weather" class="message hidden">Looks sunny today! ☀️</p>
+
+      <div id="button-box" class="buttons hidden">
+        <button onclick="alert('This will let you deposit a message!')">I want to deposit a message</button>
+        <button onclick="alert('This will let you check your message!')">Check my message</button>
+        <button onclick="alert('Here\'s a random inspiration for you!')">Got something for me?</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="rain-sound" loop autoplay>
+    <source src="rain.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
