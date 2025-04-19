@@ -1,3 +1,5 @@
+startSequence();
+
 function fadeIn(id, delay = 0) {
   const el = document.getElementById(id);
   setTimeout(() => {
@@ -49,19 +51,53 @@ async function startSequence() {
 
 
 
-function getQuote() {
+async function getQuote() {
   const num = parseInt(document.getElementById("quote-number").value);
 
   if (num >= 1 && num <= 50) {
-    // ✅ Hide the input box after valid input
-    document.getElementById("quote-input-box").classList.add("hidden");
+    fadeOut("typing-text");
+    fadeOut("quote-number");
+    fadeOut("quote-button");
+    await new Promise(r => setTimeout(r, 1000));
+  
+    document.getElementById("quote-input-box").style.display = "none";
 
-    // 🔥 Optional: display a quote (example)
-    alert("You picked number " + num + "! Here's your inspirational quote card...");
+    // Quote list
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "You are stronger than you think.",
+      "Every moment is a fresh beginning.",
+      "Start where you are. Use what you have. Do what you can.",
+      "The best time for new beginnings is now.",
+    ];
+    const quote = quotes[(num - 1) % quotes.length];
+
+    // Typing animation
+    const display = document.getElementById("quote-display");
+    display.textContent = ""; // Clear previous
+    display.classList.remove("hidden");
+    display.style.opacity = 1; // Instantly visible (for typing)
+
+    let i = 0;
+    const cursor = document.createElement("span");
+    cursor.classList.add("typing-cursor");
+    display.appendChild(cursor);
+
+    const typeInterval = setInterval(() => {
+      if (i < quote.length) {
+        display.insertBefore(document.createTextNode(quote.charAt(i)), cursor);
+        i++;
+      } else {
+        clearInterval(typeInterval);
+        cursor.remove(); // remove blinking cursor
+      }
+    }, 50); // Speed of typing
   } else {
     alert("Please enter a number between 1 and 50.");
   }
 }
 
 
-startSequence();
+
+
+
