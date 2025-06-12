@@ -113,6 +113,7 @@ html {
   color: #f1f1f1;
   font-size: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  line-height: 1.8;
 }
 
 .message {
@@ -120,6 +121,7 @@ html {
   margin: 20px 0;
   opacity: 0;
   animation: fadeIn 1s forwards;
+  line-height: 1.8;
 }
 
 .buttons {
@@ -161,6 +163,7 @@ button:hover {
   background-color: rgba(30, 30, 30, 0.8); /* optional: adds clarity */
   border-radius: 12px;
   color: white;
+  line-height: 1.8;
   
 }
 
@@ -190,16 +193,18 @@ button:hover {
 .typing-cursor {
   display: inline-block;
   width: 1px;
-  background: white;
-  animation: blink 1s infinite;
-  margin-left: 2px;
   height: 1em;
+  background-color: rgb(255, 255, 255);
+  animation: blink 1s step-start infinite;
+  margin-left: 2px;
 }
 
 @keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
+
 
 
 #quote-display {
@@ -217,4 +222,5 @@ button:hover {
   border-radius: 10px;
   opacity: 0;
   animation: fadeIn 1s forwards;
+  line-height: 1.8;
 }
