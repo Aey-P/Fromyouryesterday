@@ -64,11 +64,13 @@ async function getQuote() {
 
     // Quote list
     const quotes = [
-      "Believe in yourself and all that you are.",
-      "You are stronger than you think.",
-      "Every moment is a fresh beginning.",
-      "Start where you are. Use what you have. Do what you can.",
-      "The best time for new beginnings is now.",
+      "Due to what pass, I'm glad your here with me at this moment. Thank you for not giving up ;)",
+      "To be love and loved by you are my privilege. I'm glad we've got each other.",
+      "Have you tell you love me today? No? Well, would you please go to the mirror and to that?",
+      "You're never alone. You'll always have me in the mirror. And also someone who watch you from afar that'll jump off if you need a hand. You just need to ask.",
+      "I know you independent and strong but don't forget to let yourself feel the vulnerable sometime. To tighten rope to soon its break.",
+      "Sometime you have to admit that you are a burden and that's nothing wrong with it. Human is the socialize creature that's need to rely on each other anyway. Sometime you still in the process of learning and need some space to developing. But trust me people will understand. At least they need to.",
+      "Love yourself is not selfish action. It's the different things. To be love and taking care of someone shouldn't be forbidden. And in this case the 'someone' is you yourself.",
     ];
     const quote = quotes[(num - 1) % quotes.length];
 
