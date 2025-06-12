@@ -18,21 +18,33 @@ function fadeOut(id, delay = 0) {
 
 async function startSequence() {
   fadeIn("msg1");
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeOut("msg1");
   await new Promise(r => setTimeout(r, 1000));
 
   fadeIn("msg2");
-  await new Promise(r => setTimeout(r, 2500));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeOut("msg2");
   await new Promise(r => setTimeout(r, 1000));
 
-  fadeIn("weather");
+  fadeIn("msg3");
+  await new Promise(r => setTimeout(r, 2000));
+
+  fadeOut("msg3");
+  await new Promise(r => setTimeout(r, 1000));
+
+  fadeIn("msg4");
   await new Promise(r => setTimeout(r, 2500));
 
-  fadeOut("weather");
+  fadeOut("msg4");
+  await new Promise(r => setTimeout(r, 1000));
+
+  fadeIn("msg5");
+  await new Promise(r => setTimeout(r, 2500));
+
+  fadeOut("msg5");
   await new Promise(r => setTimeout(r, 1000));
   
 
@@ -54,7 +66,7 @@ async function startSequence() {
 async function getQuote() {
   const num = parseInt(document.getElementById("quote-number").value);
 
-  if (num >= 1 && num <= 50) {
+  if (num >= 1 && num <= 10) {
     fadeOut("typing-text");
     fadeOut("quote-number");
     fadeOut("quote-button");
@@ -115,7 +127,7 @@ async function getQuote() {
     // Show the quote display
     display.classList.remove("hidden");
   } else {
-    alert("Please enter a number between 1 and 50.");
+    alert("Please enter a number between 1 and 10.");
   }
 }
 
