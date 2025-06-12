@@ -21,31 +21,31 @@ async function startSequence() {
   await new Promise(r => setTimeout(r, 4500));
 
   fadeOut("msg1");
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeIn("msg2");
   await new Promise(r => setTimeout(r, 4500));
 
   fadeOut("msg2");
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeIn("msg3");
   await new Promise(r => setTimeout(r, 2000));
 
   fadeOut("msg3");
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeIn("msg4");
   await new Promise(r => setTimeout(r, 2500));
 
   fadeOut("msg4");
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 3000));
 
   fadeIn("msg5");
   await new Promise(r => setTimeout(r, 2500));
 
   fadeOut("msg5");
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 3000));
   
 
 
