@@ -18,16 +18,16 @@ function fadeOut(id, delay = 0) {
 
 async function startSequence() {
   fadeIn("msg1");
-  await new Promise(r => setTimeout(r, 3000));
+  await new Promise(r => setTimeout(r, 4500));
 
   fadeOut("msg1");
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 2000));
 
   fadeIn("msg2");
-  await new Promise(r => setTimeout(r, 3000));
+  await new Promise(r => setTimeout(r, 4500));
 
   fadeOut("msg2");
-  await new Promise(r => setTimeout(r, 1000));
+  await new Promise(r => setTimeout(r, 2000));
 
   fadeIn("msg3");
   await new Promise(r => setTimeout(r, 2000));
