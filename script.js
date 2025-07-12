@@ -119,6 +119,10 @@ async function getQuote() {
     backButton.classList.remove("hidden");
     backButton.addEventListener("click", goBack);
 
+    const contButton = document.getElementById("cont-button");
+    backButton.classList.remove("hidden");
+    backButton.addEventListener("click", goNext);
+
     // Hide the input box
     const quoteBox = document.getElementById("quote-input-box");
     quoteBox.classList.add("hidden");
@@ -147,6 +151,14 @@ function goBack() {
   document.getElementById("quote-button").classList.remove("hidden");
 }
 
+function goNext() {
+  const quoteDisplay = document.getElementById("quote-display");
+  quoteDisplay.classList.add("hidden");
+  quoteDisplay.textContent = ""; // Optional: clear the quote text
+
+  document.getElementById("cont-button").classList.add("hidden");
+
+}
 
 
 

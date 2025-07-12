@@ -31,11 +31,14 @@
     </div>
 
     <div id="quote-display" class="message hidden"></div>
-    <button id="back-button" class="hidden" onclick="goBack()">Back</button>
+    <button id="back-button" class="hidden" onclick="goBack()">back</button>    
+    <button id="cont-button" class="hidden" onclick="goNext()">continue</button>
 
-
-
-
+    <div id="note-writing-section" class="hidden">
+      <h2>Write a Reflection</h2>
+      <textarea id="note-input" placeholder="Write your thoughts here..."></textarea>
+      <button onclick="saveReflection()">Save</button>
+    </div>
   </div>
   
 
